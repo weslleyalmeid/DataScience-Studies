@@ -43,15 +43,13 @@ for estimator in estimators:
 
     print('Estimator: ' + name)
     print(classification_report(y_test, result))
-    print(confusion_matrix(y_test, result))
+    print(confusion_matrix(y_test, result, labels=[0, 1]))
 
     # print('accuracy: ' + accuracy)
     # print('precicion: ' + precicion)
     # print('f1: ' + f1)
     # print('recall: ' + recall)
     # print('roc_auc: ' + roc_auc)
-    
 
 
-
-
+# Verificando os algoritmos sem fine-tuning o algoritmo de random forest se saiu melhor
