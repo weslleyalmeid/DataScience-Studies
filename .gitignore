@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks,virtualenv,visualstudiocode,database
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,jupyternotebooks,virtualenv,visualstudiocode,database
 
+### myblock ###
+catboost_info/
+os.path
+
 ### Database ###
 *.accdb
 *.db
