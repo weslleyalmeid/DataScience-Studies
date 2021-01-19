@@ -70,9 +70,7 @@ paramers = {
         'iterations': [250, 100, 500, 1000],
         'learning_rate': [0.03, 0.001, 0.01, 0.1, 0.2, 0.3],
         'l2_leaf_reg': [3, 1, 5, 10, 100],
-        'border_count': [32, 5, 10, 20, 50, 100, 200],
-        'ctr_border_count': [50, 5, 10, 20, 100, 200],
-        'thread_count': 4
+        'border_count': [32, 5, 10, 20, 50, 100, 200]
     }
 }
 
@@ -89,3 +87,20 @@ rf_random.fit(X_train, y_train)
 #  'max_features': 'sqrt',
 #  'max_depth': 32,
 #  'bootstrap': False}
+
+# rf_random.best_score_ = 0.9103167938227391
+
+cb = CatBoostClassifier(verbose=False)
+cb_random = RandomizedSearchCV(estimator=cb, param_distributions=paramers['cb'], n_iter=50, cv=3, verbose=1, random_state=42, n_jobs=-1)
+cb_random.fit(X_train, y_train)
+
+
+# In [71]: cb_random.best_params_
+# Out[71]: 
+# {'learning_rate': 0.3,
+#  'l2_leaf_reg': 10,
+#  'iterations': 500,
+#  'depth': 10,
+#  'border_count': 32}
+
+# (array([0, 1]), array([94019, 33018]))
