@@ -86,3 +86,17 @@ with open(f'{rfc.__class__.__name__}.txt', 'a') as f:
 # cb_random = RandomizedSearchCV(
 #     estimator=cb, param_distributions=paramers['cb'], n_iter=100, cv=10, verbose=1, random_state=42, n_jobs=-1)
 # cb_random.fit(X_train, y_train)
+
+# Default
+# Estimator: RandomForestClassifier
+#               precision    recall  f1-score   support
+
+#            0       1.00      0.79      0.88    127037
+#            1       0.00      1.00      0.00         0
+
+#     accuracy                           0.79    127037
+#    macro avg       0.50      0.89      0.44    127037
+# weighted avg       1.00      0.79      0.88    127037
+
+# [[100201  26836]
+#  [     0      0]]

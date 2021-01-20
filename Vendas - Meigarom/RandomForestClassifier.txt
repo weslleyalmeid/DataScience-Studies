@@ -1,0 +1,19 @@
+Melhores parametros 
+{'n_estimators': 300, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 32, 'bootstrap': False}
+
+Matriz de confusão 
+[[95822 31215]
+ [    0     0]]
+
+Classification Report 
+              precision    recall  f1-score   support
+
+           0       1.00      0.75      0.86    127037
+           1       0.00      1.00      0.00         0
+
+    accuracy                           0.75    127037
+   macro avg       0.50      0.88      0.43    127037
+weighted avg       1.00      0.75      0.86    127037
+
+----- ENCERRADO ----- 
+
