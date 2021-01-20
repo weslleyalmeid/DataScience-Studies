@@ -43,7 +43,7 @@ for estimator in estimators:
     # roc_auc = cross_val_score(estimator, X_train, y_train, cv=5, scoring='roc_auc', n_jobs=3).mean()
 
     print('Estimator: ' + name)
-    print(classification_report(y_test, result, zero_division))
+    print(classification_report(y_test, result, zero_division=True))
     print(confusion_matrix(y_test, result, labels=[0, 1]))
 
     # print('accuracy: ' + accuracy)
@@ -53,64 +53,36 @@ for estimator in estimators:
     # print('roc_auc: ' + roc_auc)
 
 
-# Random forest e CatBoost se sairam melhores quanto a classificação nos dados de testes, por esse motivo será utilizado o fine-tuning em ambos para verificar
+# Random forest se saiu melhor quanto a classificação nos dados de testes, por esse motivo será utilizado o fine-tuning apenas nele
 # qual irá perfomar melhor.
 
 paramers = {
-    'rfc': {
-        'n_estimators': [10, 50, 100, 200, 300],
-        'max_features': ['auto', 'sqrt'],
-        'max_depth': [8, 16, 32, 64],
-        'min_samples_split': [2, 4, 8],
-        'min_samples_leaf': [1, 2, 4],
-        'bootstrap': [True, False]
-    },
-
-    'cb': {
-        'depth': [6, 8, 10],
-        'iterations': [500, 1000, 1200],
-        'learning_rate': [0.1, 0.2, 0.3, 0.4],
-        'l2_leaf_reg': [3, 1, 5, 10, 100],
-        'border_count': [124]
-    }
+    'n_estimators': [10, 100, 500, 1000],
+    'max_features': ['auto', 'sqrt'],
+    'max_depth': [8, 16, 32, 64],
+    'min_samples_split': [2, 4, 8],
+    'min_samples_leaf': [1, 2, 4],
+    'bootstrap': [True, False]
 }
 
 rfc = RandomForestClassifier()
-rfc_random = RandomizedSearchCV(estimator=rfc, param_distributions=paramers['rfc'], n_iter=100, cv=10, verbose=1, random_state=42, n_jobs=-1)
+rfc_random = RandomizedSearchCV(estimator=rfc, param_distributions=paramers, n_iter=50, cv=5, verbose=1, random_state=42, n_jobs=-1)
 rfc_random.fit(X_train, y_train)
-result = rfc_random.predict(X_test, y_test)
+result = rfc_random.predict(X_test)
 
-with open(f'{rfc.__class__.__name__}).txt', 'a') as f:
+with open(f'{rfc.__class__.__name__}.txt', 'a') as f:
     f.write('Melhores parametros \n')
-    f.write(rfc_random.best_estimator_.get_params())
+    f.write(str(rfc_random.best_params_))
 
-    f.write('Matriz de confusão \n')
-    f.write(result)
+    f.write('\n\nMatriz de confusão \n')
+    f.write(str(confusion_matrix(y_test, result, labels=[0, 1])))
 
-    f.write('----- ENCERRADO ----- \n\n')
+    f.write('\n\nClassification Report \n')
+    f.write(str(classification_report(y_test, result, zero_division=True)))
 
+    f.write('\n----- ENCERRADO ----- \n\n')
 
-# RandomForestClassifier(bootstrap=False, max_depth=32, max_features='sqrt',
-#                        min_samples_split=5, n_estimators=200)
-
-# rfc_best = {'n_estimators': 200,
-#  'min_samples_split': 5,
-#  'min_samples_leaf': 1,
-#  'max_features': 'sqrt',
-#  'max_depth': 32,
-#  'bootstrap': False}
-
-cb = CatBoostClassifier(verbose=False)
-cb_random = RandomizedSearchCV(estimator=cb, param_distributions=paramers['cb'], n_iter=100, cv=10, verbose=1, random_state=42, n_jobs=-1)
-cb_random.fit(X_train, y_train)
-
-
-# In [71]: cb_random.best_params_
-# Out[71]: 
-# {'learning_rate': 0.3,
-#  'l2_leaf_reg': 10,
-#  'iterations': 500,
-#  'depth': 10,
-#  'border_count': 32}
-
-# (array([0, 1]), array([94019, 33018]))
+# cb = CatBoostClassifier(verbose=False)
+# cb_random = RandomizedSearchCV(
+#     estimator=cb, param_distributions=paramers['cb'], n_iter=100, cv=10, verbose=1, random_state=42, n_jobs=-1)
+# cb_random.fit(X_train, y_train)
