@@ -57,7 +57,7 @@ for estimator in estimators:
 # qual irá perfomar melhor.
 
 paramers = {
-    'n_estimators': [50],
+    'n_estimators': [500],
     'max_features': ['sqrt'],
     'max_depth': [8, 16, 32, 64],
     'min_samples_split': [2, 4, 8],
