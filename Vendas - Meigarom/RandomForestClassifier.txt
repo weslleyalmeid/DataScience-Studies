@@ -17,3 +17,22 @@ weighted avg       1.00      0.75      0.86    127037
 
 ----- ENCERRADO ----- 
 
+Melhores parametros 
+{'verbose': 3, 'n_estimators': 300, 'min_samples_split': 4, 'min_samples_leaf': 10, 'max_features': 'sqrt', 'max_depth': 64, 'bootstrap': True}
+
+Matriz de confusão 
+[[93167 33870]
+ [    0     0]]
+
+Classification Report 
+              precision    recall  f1-score   support
+
+           0       1.00      0.73      0.85    127037
+           1       0.00      1.00      0.00         0
+
+    accuracy                           0.73    127037
+   macro avg       0.50      0.87      0.42    127037
+weighted avg       1.00      0.73      0.85    127037
+
+----- ENCERRADO ----- 
+
