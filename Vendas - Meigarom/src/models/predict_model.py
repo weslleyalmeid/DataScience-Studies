@@ -57,17 +57,17 @@ for estimator in estimators:
 # qual irá perfomar melhor.
 
 paramers = {
-    'n_estimators': [300, 400],
+    'n_estimators': [200],
     'max_features': ['sqrt'],
     'max_depth': [8, 16, 32],
-    'min_samples_split': [2, 4, 8],
-    'min_samples_leaf': [10, 20, 50],
+    'min_samples_split': [0.1, 1, 2, 4, 6, 8, 10],
+    'min_samples_leaf': [0.1, 5,10, 20, 50],
     'bootstrap': [True, False],
     'verbose': [3]
 }
 
 rfc = RandomForestClassifier()
-rfc_random = RandomizedSearchCV(estimator=rfc, param_distributions=paramers, n_iter=20, cv=5, verbose=3, random_state=42, n_jobs=3)
+rfc_random = RandomizedSearchCV(estimator=rfc, param_distributions=paramers, n_iter=15, cv=5, verbose=3, random_state=42, n_jobs=3)
 rfc_random.fit(X_train, y_train)
 result = rfc_random.predict(X_test)
 
