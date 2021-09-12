@@ -27,3 +27,6 @@ spark.catalog.listColumns("tab_alunos").show
 spark.read.table("tab_alunos").show(10)
 spark.sql("select * from tab_alunos limit 10").show()
 ```
+
+## Nota
+Um dataset é mais rápido que um dataframe, pois, o dataset tem um schema associado.
