@@ -1,7 +1,7 @@
 ## Hive - Criação de Tabelas Otimizadas
 
 1. Usar o banco de dados <nome>
-```
+```bash
 docker exec -it hive-server bash
 beeline -u jdbc:hive2://localhost:10000
 show databases;
@@ -9,12 +9,12 @@ use weslley;
 ```
 
 2. Selecionar os 10 primeiros registros da tabela pop
-```
+```bash
 select * from pop limit 10;
 ```
 
 3. Criar a tabela pop_parquet no formato parquet para ler os dados da tabela pop
-```
+```bash
 create table pop_parquet(
 zip_code int,
 total_population int,
@@ -28,22 +28,22 @@ stored as parquet;
 ```
 
 4. Inserir os dados da tabela pop na pop_parquet
-```
+```bash
 insert into pop_parquet select * from pop;
 ```
 
 5. Contar os registros da tabela pop_parquet
-```
+```bash
 select count(*) from pop_parquet;
 ```
 
 6. Selecionar os 10 primeiros registros da tabela pop_parquet
-```
+```bash
 select * from pop_parquet limit 10;
 ```
 
 7. Criar a tabela pop_parquet_snappy no formato parquet com compressão Snappy para ler os dados da tabela pop
-```
+```bash
 create table pop_parquet_snappy(
 zip_code int,
 total_population int,
@@ -58,22 +58,22 @@ tblproperties('parquet.compress'='SNAPPY');
 ```
 
 8. Inserir os dados da tabela pop na pop_parquet_snappy
-```
+```bash
 insert into pop_parquet_snappy select * from pop;
 ```
 
 9. Contar os registros da tabela pop_parquet_snappy
-```
+```bash
 select count(*) from pop_parquet_snappy;
 ```
 
 10. Selecionar os 10 primeiros registros da tabela pop_parquet_snappy
-```
+```bash
 select * from pop_parquet_snappy limit 10;
 ```
 
 11. Comparar as tabelas pop, pop_parquet e pop_parquet_snappy no HDFS.
-```
+```bash
 docker exec -it namenode bash  
 hdfs dfs -ls /user/hive/warehouse/weslley.db
 hdfs dfs -ls -R /user/hive/warehouse/weslley.db
