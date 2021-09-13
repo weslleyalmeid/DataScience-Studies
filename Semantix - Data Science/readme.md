@@ -1,6 +1,6 @@
 ## Curso de Data Science -  Semantix
 
-- [ ] - Big Data Foundations
+- [x] - Big Data Foundations
     - Hadoop
     - Hive
     - Sqoop
