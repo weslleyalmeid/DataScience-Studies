@@ -72,6 +72,5 @@ sqoop import --table cp_rental_id --connect jdbc:mysql://database/sakila --usern
 sqoop import --table cp_rental_date --connect jdbc:mysql://database/sakila --username root --password secret --warehouse-dir /user/hive/warehouse/db_test3  -m 1  --incremental lastmodified --merge-key rental_id --check-column rental_date --last-value '2005-08-23 22:50:12.0'
 
 hdfs dfs -ls -h -R /user/hive/warehouse/db_test3
-
 ```
 

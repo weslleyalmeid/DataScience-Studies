@@ -4,6 +4,7 @@ Todos os comandos precisam ser executados pelo Sqoop.
 
 1. Mostrar todos os databases
 ```bash
+docker exec -it namenode bash
 sqoop list-databases --connect jdbc:mysql://database --username root --password secret
 ```
 
