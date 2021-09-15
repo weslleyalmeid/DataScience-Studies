@@ -6,11 +6,13 @@
     - Sqoop
     - HBase
     - Spark
+
 - [ ] -Armazenamento e Escrita de Dados
     - MongoDB
     - Redis
     - Kafka
     - Elastic
+    
 - [ ] -Estatística Descritiva
 - [ ] -Python – Básico
 - [ ] -Scikit-learn
