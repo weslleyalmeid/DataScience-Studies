@@ -7,13 +7,18 @@
     - HBase
     - Spark
 
-- [ ] -Armazenamento e Escrita de Dados
+- [x] -Armazenamento e Escrita de Dados
     - MongoDB
     - Redis
     - Kafka
     - Elastic
     
 - [ ] -Estatística Descritiva
+    - Conceitos Básicos
+    - Medidas Resumo
+    - Medidas Resumo (Aplicação)
+    - Análise Gráfica
+
 - [ ] -Python – Básico
 - [ ] -Scikit-learn
 - [ ] -PySpark
