@@ -1,0 +1,24 @@
+version: '3' 
+services:
+  spark:
+    image: fjardim/jupyter-spark
+    hostname: spark
+    container_name: spark
+    command: notebook
+    env_file:
+      - ./data/jupyter/jupyter.env
+    ports:
+      - 8889:8889
+      - 4040:4040
+      - 4041:4041
+      - 4042:4042
+      - 4043:4043
+    volumes:
+       - ./data/notebooks:/mnt/notebooks/
+    environment:
+       SPARK_MASTER: local[*]
+       JUPYTER_PORT: 8889
+    deploy:
+      resources:
+        limits:
+          memory: 1g

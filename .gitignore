@@ -5,8 +5,8 @@
 ### myblock ###
 catboost_info/
 os.path
-/Semantix - Data Science/*/prova
-
+/Semantix - Data Science/**/prova
+/Semantix - Data Science/**/input
 
 ### Database ###
 *.accdb
