@@ -1,0 +1,18 @@
+## SOLID
+
+1. Qual o objetivo básico de uma Arquitetura Limpa?
+```md
+Promover implementação de sistemas que favorecem reusabilidade de código, coesão, independência de tecnologia e testabilidade.
+```
+2. Descreva com suas palavras os princípios S.O.L.I.D.
+```md
+- Single-responsibility Principle (S): Cada classe deve ter apenas um responsabilidade;
+- Open-closed Principle (O): Objetos e entidades devem estar abertos para extensão mas fechados para alterações;
+-  Liskov substitution Principle( L): Objetos devem ser substituíveis com instâncias de seus tipos base;
+- Interface segregation Principle (I): Muitas inferfaces específicas são melhores que uma interface de uso geral;
+- Dependency inversion Principle (D): Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações. Abstrações não devem depender de detalhes, detalhes devem depender de abstrações.
+```
+3. Qual é a importância de dar nomes mais legíveis para funções e variáveis
+```md
+Para facilitar na compreenção e interpreção do código, tornando assim, um código mais humano, ou seja, de interpretação amigável.
+```
