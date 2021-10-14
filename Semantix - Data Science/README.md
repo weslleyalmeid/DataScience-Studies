@@ -7,20 +7,41 @@
     - HBase
     - Spark
 
-- [x] -Armazenamento e Escrita de Dados
+- [x] - Armazenamento e Escrita de Dados
     - MongoDB
     - Redis
     - Kafka
     - Elastic
     
-- [ ] -Estatística Descritiva
+- [x] - Estatística Descritiva
     - Conceitos Básicos
     - Medidas Resumo
     - Medidas Resumo (Aplicação)
     - Análise Gráfica
 
-- [ ] -Python – Básico
-- [ ] -Scikit-learn
-- [ ] -PySpark
-- [ ] -Redes Neurais
-- [ ] -AG e NLP
+- [x] - Python Básico
+    - Fundamentos
+    - Ambiente virtuais
+    - Testes, Logs e Decorators
+    - Pandas e Plotly
+    - Boas práticas de desenvolvimento
+
+- [x] - Machine Learning Básico
+    - Data Sciente
+    - Regressão
+    - Classificação
+    - Clusterização
+
+- [ ] - PySpark
+    - Fundamentos
+    - Manipulação de Big Data
+    - Uso do Jupyter Notebooks para a criação de projetos em Spark com Python
+    - Spark batch intermediario
+    - Operações com RDD em Spark para processamento de dados em batch;
+    - Uso de Partições com RDD;
+    - Operações com Dataset em Spark para processamento de dados em batch;
+    - Uso de Dataset em Dataframe e RDD;
+    - Comandos avançados com Dataset;
+    
+- [ ] - Redes Neurais
+- [ ] - AG e NLP
