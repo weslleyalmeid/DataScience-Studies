@@ -47,6 +47,7 @@ spark.catalog.listTables()
 
 10. Ler e visualizar os dados da tabela juros, com uso de Dataframe no formato de Tabela Hive
 ```jupyter
+
 ```
 
 11. Ler e visualizar os dados da tabela juros , com uso de Dataframe no formato Parquet
