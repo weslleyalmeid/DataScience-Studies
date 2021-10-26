@@ -32,7 +32,7 @@
     - Classificação
     - Clusterização
 
-- [ ] - PySpark
+- [x] - PySpark
     - Fundamentos
     - Manipulação de Big Data
     - Uso do Jupyter Notebooks para a criação de projetos em Spark com Python
@@ -44,4 +44,10 @@
     - Comandos avançados com Dataset;
     
 - [ ] - Redes Neurais
+    - A história do desenvolvimento da Neurociência Computacional
+    - Introdução às Redes Neurais Biológicas e Artificiais
+    - O Percéptron
+    - TensorFlow/Keras
+    -Pytorch
+
 - [ ] - AG e NLP
