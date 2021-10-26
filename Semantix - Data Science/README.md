@@ -37,17 +37,17 @@
     - Manipulação de Big Data
     - Uso do Jupyter Notebooks para a criação de projetos em Spark com Python
     - Spark batch intermediario
-    - Operações com RDD em Spark para processamento de dados em batch;
-    - Uso de Partições com RDD;
-    - Operações com Dataset em Spark para processamento de dados em batch;
-    - Uso de Dataset em Dataframe e RDD;
-    - Comandos avançados com Dataset;
+    - Operações com RDD em Spark para processamento de dados em batch
+    - Uso de Partições com RDD
+    - Operações com Dataset em Spark para processamento de dados em batch
+    - Uso de Dataset em Dataframe e RDD
+    - Comandos avançados com Dataset
     
 - [ ] - Redes Neurais
     - A história do desenvolvimento da Neurociência Computacional
     - Introdução às Redes Neurais Biológicas e Artificiais
     - O Percéptron
     - TensorFlow/Keras
-    -Pytorch
+    - Pytorch
 
 - [ ] - AG e NLP
