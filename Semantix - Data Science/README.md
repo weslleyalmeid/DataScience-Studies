@@ -43,7 +43,7 @@
     - Uso de Dataset em Dataframe e RDD
     - Comandos avançados com Dataset
     
-- [ ] - Redes Neurais
+- [x] - Redes Neurais
     - A história do desenvolvimento da Neurociência Computacional
     - Introdução às Redes Neurais Biológicas e Artificiais
     - O Percéptron
