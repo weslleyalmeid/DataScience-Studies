@@ -57,3 +57,9 @@
     - N-gram
     - Remover stopwords
     - Correção ortográfica
+    - Bag of Words (BOW)
+    - TF-IDF
+    - BM25
+    - Modelagem de Tópicos
+    - Word embedding
+    - Transformers
