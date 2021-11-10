@@ -51,3 +51,9 @@
     - Pytorch
 
 - [ ] - AG e NLP
+    - Regex
+    - Tokenização
+    - Normalização
+    - N-gram
+    - Remover stopwords
+    - Correção ortográfica
