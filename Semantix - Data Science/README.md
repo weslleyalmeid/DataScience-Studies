@@ -50,7 +50,7 @@
     - TensorFlow/Keras
     - Pytorch
 
-- [ ] - AG e NLP
+- [x] - NLP
     - Regex
     - Tokenização
     - Normalização
@@ -63,3 +63,8 @@
     - Modelagem de Tópicos
     - Word embedding
     - Transformers
+
+- [ ] - Algoritmos Genéticos
+    - Conceitos
+    - Funcionamento e aplicações
+    - Exemplo prático de otimização 
