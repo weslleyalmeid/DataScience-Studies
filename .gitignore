@@ -9,6 +9,10 @@ os.path
 /Semantix - Data Science/**/input
 /Semantix - Data Science/**/spark/data
 
+/Otimização em Python - Pesquisa Operacional/material
+/Séries Temporais com Python/material
+
+
 ### Database ###
 *.accdb
 *.db
