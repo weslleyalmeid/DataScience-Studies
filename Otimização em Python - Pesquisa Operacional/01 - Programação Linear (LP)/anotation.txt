@@ -1,0 +1,33 @@
+Programação Linear (LP):
+- Não possuí variáveis inteiras, apenas contínuas
+- Não existe operações não lineares na função objetivo e restrições
+
+
+Primeiro exemplo:
+
+max x + y
+
+-x + 2y <= 8
+2x + y <= 14
+2x - y <= 10
+0 <= x <= 10
+0 <= y <= 10
+
+Instação do Gurobi
+
+sudo mv ~/Downloads/gurobi9.5.1_linux64.tar.gz /opt
+cd /opt
+sudo tar -xzf gurobi9.5.1_linux64.tar.gz
+export GUROBI_HOME=/opt/gurobi951/linux64
+export PATH=$GUROBI_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$GUROBI_HOME/lib:$LD_LIBRARY_PATH
+grbgetkey key
+gurobi_cl $GUROBI_HOME/examples/data/afiro.mps
+
+Instalação Pyomo
+
+sudo apt install libglpk-dev libgmp3-dev
+sudo apt-get install glpk-utils libglpk-dev
+pip install glpk
+
+
