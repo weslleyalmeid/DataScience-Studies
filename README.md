@@ -4,3 +4,4 @@ Repositório para desenvolvimento de atividades propostas por cursos e resoluç�
 - AceleraDev Data Science - Codenation
 - Projeto Vendas - Meigarom
 - Big Data Science - Semantix
+- Otimização em Python - Pesquisa Operacional
