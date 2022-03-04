@@ -42,3 +42,22 @@ Instalação do CPLEX
 export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux/cplex"
 export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex"
 
+
+Docker Coinor
+
+```bash
+# baixando e inicializando imagem
+docker pull coinor/coin-or-optimization-suite
+docker create --name=coin-or -it coinor/coin-or-optimization-suite
+
+# iniciando container
+docker start coin-or
+
+# copiando arquivo SRC_PATH:NAME_FILE to DEST_PATH:NAME_FILE
+docker container cp ./01_pyomo_ex.py 6ee23ede17ef:/tmp/counne.py
+
+# é necessário instalar python, pip e vim
+# executar script python
+# docker container exec -it id_container [COMMAND]
+docker container exec -it 6ee2 python3 /tmp/counne.py
+```
