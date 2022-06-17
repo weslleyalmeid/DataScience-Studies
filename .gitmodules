@@ -1,0 +1,3 @@
+[submodule "Algorithms_and_Data_Structures"]
+	path = Fraud_Detection
+	url = git@github.com:weslleyalmeid/squad_keras.git
