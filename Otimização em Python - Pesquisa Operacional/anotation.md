@@ -15,6 +15,7 @@ max x + y
 
 Instação do Gurobi
 
+```sh
 sudo mv ~/Downloads/gurobi9.5.1_linux64.tar.gz /opt
 cd /opt
 sudo tar -xzf gurobi9.5.1_linux64.tar.gz
@@ -24,24 +25,28 @@ export PATH=$GUROBI_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib:$LD_LIBRARY_PATH
 grbgetkey key
 gurobi_cl $GUROBI_HOME/examples/data/afiro.mps
+```
 
 Instalação Pyomo
-
+```sh
 sudo apt install libglpk-dev libgmp3-dev
 sudo apt-get install glpk-utils libglpk-dev
 pip install glpk
+```
 
 Instação do CBC
+```sh
 sudo apt install coinor-cbc
-
+```
 
 Lembre-se CBC, Guropi e GLPK são utilizados para programação linear
 
 
 Instalação do CPLEX
+```sh
 export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux/cplex"
 export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex"
-
+```
 
 Docker Coinor
 
