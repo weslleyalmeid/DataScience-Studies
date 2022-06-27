@@ -64,7 +64,11 @@
     - Word embedding
     - Transformers
 
-- [ ] - Algoritmos Genéticos
+- [x] - Algoritmos Genéticos
     - Conceitos
     - Funcionamento e aplicações
     - Exemplo prático de otimização 
+
+
+### Insignia de conclusão
+![](./Semantix%20Academy%20-%20Big%20Data%20-%20Science%20-%202021-12-13.png)
